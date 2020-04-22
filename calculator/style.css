@@ -1,0 +1,243 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding-top:140px;
+    margin:0;
+    width:100%;
+    height:100vh;
+    background-color: rgb(65, 68, 236);
+    background: linear-gradient(70deg,rgb(52, 97, 246),rgb(81, 47, 175));
+    /* background-image:url(ff.jpg); */
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+}
+.outerLayout{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+}
+.main-quiz{
+    margin-top:-100px;
+}
+.calculator{
+    background: linear-gradient(180deg,rgb(87, 151, 255),rgb(109, 48, 250));
+    box-shadow: 1px 2.5px 28px 1px rgba(24, 40, 59, 0.6);
+    border-radius: 6px;
+    width:220px;
+    height:auto;
+    z-index: 100;
+    
+    
+    transform:scale(1.4);
+}
+.colorRightRow{
+    background:rgb(42, 110, 219);
+}
+table{
+    border-collapse: collapse;
+    
+}
+table tr td{
+    border: 1px solid rgba(82, 82, 82,0.2);
+}
+.equalsBtn{
+    background: linear-gradient(90deg, rgb(51, 212, 151), rgb(68, 230, 109));
+}
+.calc-btns{
+    background-color:transparent;
+    color:white;
+    font-size:18px;
+    width:40px;
+    height:40px;
+    margin:0px;
+    border: none;
+    outline:none;
+}
+.calc-btns:active{
+    background-color:rgb(58, 88, 219);
+}
+.calc-screen{
+    padding-top:25px;
+    font-size: 24px;
+    color:rgb(77, 50, 233);
+    height:80px;
+    text-align:right;
+}
+.calc-screen:focus{
+    outline:none;
+}
+form{
+    position:relative;
+}
+form p{
+    position:absolute;
+    top:14px;
+    right:12px;
+    background-color:white;
+    text-align:right;
+    font-size:14px;
+}
+form div{
+    position:absolute;
+    display:flex;
+    top:8px;
+    left:10px;
+}
+form div span{
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    margin-right:4px;
+}
+  
+#disableTyping{
+    background-color:#fff !important;
+}
+footer div{
+    width:100%;
+
+    padding-top:120px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+footer button:active, .calc-switch-btn:active{
+    background-color: rgb(9, 255, 91) !important;
+}
+.flip-enter-active{
+    animation: flip-in 0.5s ease-out forwards;
+}
+.quiz-footer{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin-top:30px;
+    padding-bottom:50px;
+}
+
+.flip-leave-active{
+    animation: flip-out 0.5s ease-out forwards;
+}
+
+
+@keyframes flip-in{
+  from{
+    transform: rotateY(90deg);
+  }
+  to{
+    transform: rotateY(0deg);
+  }
+}
+@keyframes flip-out{
+  from{
+    transform: rotateY(0deg);
+  }
+  to{
+    transform: rotateY(90deg);
+  }
+}.card-body .row div{
+        display:flex !important;
+        /* flex-direction: column; */
+        /* border:1px solid black; */
+        justify-content: center;
+        align-items:center;
+}
+/* .fadeAndZoom-enter{
+    
+} */
+.fadeAndZoom-enter-active{
+    animation: fadeAndZoom-in .2s ease-out forwards; 
+}
+/* .fadeAndZoom-leave{
+    
+} */
+.fade-enter-leave-active{
+    animation: fadeAndZoom-out .2s ease-out forwards;
+    position: absolute;
+}
+.open-history{
+    position:relative;
+    cursor:pointer;
+    color:rgb(35, 36, 36);
+    font-size:13px !important;
+}
+.open-history:active{
+    color:rgb(25, 175, 245);
+}
+.popup-arrow{
+    position: absolute;
+    top:1%;
+    left:10%;
+    margin-top:23.5px;
+    width:15px;
+    height:15px;
+    transform: rotate(45deg);
+    border:1px solid rgb(38, 90, 202);
+    z-index:200;
+    border-bottom:none;
+    border-right:none;
+    background-color:white;
+}
+.history-popup{
+    position: absolute;
+    left:-90px;
+    width: 150px;
+    max-height:140px;
+    overflow-y: auto;
+    overflow-x:hidden;
+    background-color:white;
+    border: 1px solid rgb(38, 90, 202);
+    list-style: none;
+    margin-top:17px !important;
+    padding:3px !important;
+}
+.history-popup li{
+    border-bottom: 1px solid #ccc;
+    padding:5px 0;
+    color:black;
+}
+@keyframes fadeAndZoom-in{
+    from{
+        opacity:1;
+        transform: scale(1);
+    }
+    to{
+        opacity:0;
+        transform: scale(0.5);
+    }
+}
+@keyframes fadeAndZoom-out{
+    from{
+        opacity:0;
+        transform: scale(0.5);
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@media only screen and (max-width:700px){
+    .calculator{
+        position: static;
+        transform: scale(1.4);
+    }
+    body{
+        padding-top:100px !important;
+        height: auto !important;
+    }
+    .outerLayout{
+        padding-bottom: 11px;
+    }
+    .main-quiz{
+        margin-top:-90px;
+    }
+    .card{
+        transform: scale(0.9);
+    }
+}
